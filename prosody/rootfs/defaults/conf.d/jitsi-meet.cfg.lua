@@ -65,6 +65,7 @@ consider_bosh_secure = true;
 {{ $XMPP_CROSS_DOMAIN := .Env.XMPP_CROSS_DOMAIN | default "" }}
 {{ if eq $XMPP_CROSS_DOMAIN "true"}}
 cross_domain_websocket = true
+consider_websocket_secure = true;
 cross_domain_bosh = true
 {{ else }}
 {{ if not (eq $XMPP_CROSS_DOMAIN "false") }}
